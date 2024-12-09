@@ -42,6 +42,7 @@
     "release:force": "lerna publish from-package --yes --no-git-tag-version",
     "release": "lerna publish",
     "run:example": "tsx -r dotenv/config -r tsconfig-paths/register ./examples/index.ts"
+    "build": "npx tsc && npx copyfiles -u 1 './**/*' '!./**/*.ts' dist/"
   },
   "resolutions": {
     "@types/react": "^17.0.0",
